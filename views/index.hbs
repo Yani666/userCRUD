@@ -1,0 +1,21 @@
+<h1>Lista de usuarios 🚀</h1>
+
+
+
+{{!-- veremos si contenemos usuarios --}}
+{{#if users}}
+<ul>
+    {{!-- creamos una lista dinamica de usuarios --}}
+{{#each users}}
+<li>{{username}}
+<a href="/update/{{_id}}">Editar</a>
+<a href="/delete/{{_id}}">Eliminar</a>
+{{/each}}
+</ul>
+</li>
+{{!-- de lo contrario mostramos un mensaje  --}}
+{{else}}
+<p>No tienes usuarios aun</p>
+{{/if}}
+
+<a href="/create">Crear nuevo usuario</a> {{!--esta ruta viene de index.routes--}}

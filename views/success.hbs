@@ -1,0 +1,9 @@
+{{#if isEdit}}
+<h1>Has actualizado un user {{username}}</h1>
+{{else if isDelete}}
+<h1>Se elimino un usuario</h1>
+{{else}}
+<h1>Has creado un nuevo usuario llamado {{username}}</h1>
+{{/if}}
+
+<a href="/">Regresar al home</a>
